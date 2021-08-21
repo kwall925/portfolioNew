@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>
+    Ken Wall | Developer
+  </title>
+  <link rel="stylesheet" href="index.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <script src='index.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class='skills'>
+      <p class='soft leftText'>KEN WALL<span style='color:#fff;'> /</span> <span style='color: rgb(138, 138, 138);'>FRONT END DEV</span></p>
+      <span class='hard'>SKILLS</span>
+    </div>
+    <main>
+      <div class="box"><i class="fab fa-js-square gridimg js"></i></div>
+      <div class="box"><i class="fab fa-css3 gridimg css"></i></div>
+      <div class="box"><i class="fab fa-html5 gridimg html"></i></div>
+      <div class="box"><i class="fas fa-gem gridimg"></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
+    </main>
+    <section class='watermarks'>
+      <i class="fab fa-js-square water"></i>
+    </section>
+  </div>
+        <script type="text/javascript">
+        let hov = document.querySelector('.js');
+        let grid = document.getElementsByClassName('gridimg');
+        hov.onmouseover = function(){
+          // hide all icons
+          for (let i = 0; i < grid.length; i++){
+            grid[i].style.visibility = 'hidden';
+          }
+          // show current icon and watermark
+          this.style.cssText = 'transition: none; visibility: visible; opacity: 25%;'
+          document.querySelector('.water').style.cssText = 'visibility: visible; color: #f7df1e; opacity: 60%;'
+        }
+        hov.onmouseout = function(){
+          // make icons visible again and hide watermark
+          for (let j = 0; j < grid.length; j++){
+            grid[j].style.cssText = 'visibility: visible; opacity: 1;'
+          }
+          document.querySelector('.water').style.visibility = 'hidden';
+        }
+      </script>
+</body>
+</html>
