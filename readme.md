@@ -43,3 +43,33 @@ anime.timeline({loop: false})
     animateWords();
 
   </script>
+
+
+      function animateWords(){
+        let para = document.querySelector('.soft');
+        let words = document.querySelector('.soft').innerText;
+        console.log(para)
+        console.log(words.style);
+
+        let i = 0;
+
+        setInterval(function() {
+        if (i >= words.length) clearInterval(this);
+        //else console.log(words[i]);
+        //else words[i].classList.add('opa');
+          else {
+              // create a new div element
+              const newDiv = document.createElement("h6");
+              // and give it some content
+              const newContent = document.createTextNode(words[i]);
+              // add the text node to the newly created div
+              newDiv.appendChild(newContent);
+              newDiv.style.opacity = '1'
+              para.insertAdjacentHTML('beforebegin', newDiv.innerHTML);
+              console.log(newDiv);
+        }
+        i++;
+         }, 130);
+      }
+
+    animateWords();

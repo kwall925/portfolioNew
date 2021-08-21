@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <div class='skills'>
-      <p class='soft leftText'>KEN WALL<span style='color:#fff;'> /</span> <span style='color: rgb(138, 138, 138);'>FRONT END DEV</span></p>
+      <p class='soft leftText'>KEN WALL<span style='color: #fff'> /</span> <span style='color: #EA1111;'>FRONT END DEV</span></p>
       <span class='hard'>SKILLS</span>
     </div>
     <main>
@@ -21,9 +21,9 @@
       <div class="box"><i class="fab fa-css3 gridimg css"></i></div>
       <div class="box"><i class="fab fa-html5 gridimg html"></i></div>
       <div class="box"><i class="fas fa-gem gridimg"></i></div>
-      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
-      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
-      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
+      <div class="box"><i class="fab fa-sass gridimg sass"></i></div>
+      <div class="box"><i class="fab fa-git gridimg git"></i></div>
+      <div class="box"><i class="fab fa-github gridimg github"></i></div>
       <div class="box"><i class="fab fa-js-square gridimg"></i></div>
       <div class="box"><i class="fab fa-js-square gridimg"></i></div>
       <div class="box"><i class="fab fa-js-square gridimg"></i></div>
@@ -35,24 +35,41 @@
     </section>
   </div>
         <script type="text/javascript">
-        let hov = document.querySelector('.js');
-        let grid = document.getElementsByClassName('gridimg');
-        hov.onmouseover = function(){
-          // hide all icons
-          for (let i = 0; i < grid.length; i++){
-            grid[i].style.visibility = 'hidden';
-          }
-          // show current icon and watermark
-          this.style.cssText = 'transition: none; visibility: visible; opacity: 25%;'
-          document.querySelector('.water').style.cssText = 'visibility: visible; color: #f7df1e; opacity: 60%;'
-        }
-        hov.onmouseout = function(){
-          // make icons visible again and hide watermark
-          for (let j = 0; j < grid.length; j++){
-            grid[j].style.cssText = 'visibility: visible; opacity: 1;'
-          }
-          document.querySelector('.water').style.visibility = 'hidden';
-        }
+
+          let hov = document.querySelector('.js');
+          let grid = document.getElementsByClassName('gridimg');
+          hov.onmouseover = function(){
+            // hide all icons
+            for (let i = 0; i < grid.length; i++){
+              grid[i].style.visibility = 'hidden';
+            }
+            // show current icon and watermark
+            this.style.cssText = 'transition: none; visibility: visible; opacity: 25%;'
+            document.querySelector('.water').style.cssText = 'visibility: visible; color: #f7df1e; opacity: 60%;'
+            }
+            hov.onmouseout = function(){
+              // make icons visible again and hide watermark
+              for (let j = 0; j < grid.length; j++){
+                grid[j].style.cssText = 'visibility: visible; opacity: 1;'
+              }
+              document.querySelector('.water').style.visibility = 'hidden';
+            }
+
+
+          /*  let grid = document.getElementsByClassName('gridimg');
+            for (let i = 0; i < grid.length; i++){
+                //grid[i].style.visibility = 'visible';
+              //grid[i].style.visibility = 'hidden';
+                //grid[i].style.visibility = 'hidden';
+            }*/
+
+
+            // add animation
+            let el = document.querySelector('.soft');
+            setTimeout(function(){ el.classList.add('addAnimation') }, 800);
+            let hard = document.querySelector('.hard');
+            setTimeout(function(){ hard.classList.add('hardAnimation') }, 2200);
+
       </script>
 </body>
 </html>

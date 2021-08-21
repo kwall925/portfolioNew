@@ -8,7 +8,7 @@ function counter() {
     if (i == imgs.length) clearInterval(this);
     else imgs[i].style.opacity = 1;
     i++;
-  }, 130);
+  }, 100);
 }
 
 counter()

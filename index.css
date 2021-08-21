@@ -9,7 +9,7 @@
   background: #012430;
    }*/
 
-   body{   background: black; }
+   body{   background: #012430; }
 
 .container {
   height:  93vh;
@@ -27,8 +27,9 @@
   justify-content: flex-start;
   flex-direction: column-reverse;
   position:  relative;
-  animation: type 2s ease-in-out;
-}
+  /*  animation: type 2s ease-in-out;
+  */
+  }
 
 .hard {
   font-family: 'Overpass', sans-serif;
@@ -37,29 +38,54 @@
   color:  white;
   margin-block-start: 0;
   margin-block-end: 0;
+  opacity:  0;
+  transition:  opacity ease-in 1s;
+}
+
+.hardAnimation {
+  opacity:  1;
+}
+
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 472px;}
 }
 
 .soft {
   font-family: 'Overpass', sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 1.4em;
-  /* color:  #579dff; blue*/
+  color:  #579dff;
   /*#EA1111 red*/
-  opacity:  40%;
-  color:  rgb(204, 204, 204);
+  opacity:  0%;
+  /*color:  rgb(204, 204, 204);*/
   margin:  0;
   padding:  0;
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
+.addAnimation{
+  animation: animated-text 2s steps(30,end) 1s 1 normal both;
+  opacity:  50%;
+}
+
 .leftText {
   position: absolute;
+}
+
+h6 {
+  color:  white;
 }
 
 /*.rightText {
   postion:  absolute;
 }*/
 
+
+/*
 
 @keyframes type {
   0% {
@@ -71,7 +97,12 @@
   100% {
     transform: opacity(100%);
   }
-}
+} */
+
+
+
+
+
 
 main {
   display: grid;
