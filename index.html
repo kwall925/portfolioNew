@@ -5,71 +5,36 @@
   <title>
     Ken Wall | Developer
   </title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="css/index.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
-  <script src='index.js'></script>
+  <script src='js/index.js'></script>
+  <script src='js/grid.js'></script>
+  <script src='js/animation.js'></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 <body>
   <div class="container">
     <div class='skills'>
-      <p class='soft leftText'>KEN WALL<span style='color: #fff'> /</span> <span style='color: #EA1111;'>FRONT END DEV</span></p>
+      <p class='soft leftText'>KEN WALL<span style='color: #fff'> /</span><span style='color: #EA1111;'>FRONT END DEV</span></p>
       <span class='hard'>SKILLS</span>
     </div>
     <main>
-      <div class="box"><i class="fab fa-js-square gridimg js"></i></div>
-      <div class="box"><i class="fab fa-css3 gridimg css"></i></div>
-      <div class="box"><i class="fab fa-html5 gridimg html"></i></div>
-      <div class="box"><i class="fas fa-gem gridimg"></i></div>
-      <div class="box"><i class="fab fa-sass gridimg sass"></i></div>
-      <div class="box"><i class="fab fa-git gridimg git"></i></div>
-      <div class="box"><i class="fab fa-github gridimg github"></i></div>
-      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
-      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
-      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
-      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
-      <div class="box"><i class="fab fa-js-square gridimg"></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg js" id="1" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
+      <div class="box"><i class="fab fa-css3 gridimg css" id="2" onmouseover='hidegrid(this.id)' onmouseout='showgrid(this.id)'></i></div>
+      <div class="box"><i class="fab fa-html5 gridimg html" id="3" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
+      <div class="box"><i class="fas fa-gem gridimg" id="4" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
+      <div class="box"><i class="fab fa-sass gridimg sass" id="5" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
+      <div class="box"><i class="fab fa-git gridimg git" id="6" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
+      <div class="box"><i class="fab fa-github gridimg github" id="7" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg" id="8" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg" id="9" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg" id="10" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg" id="11" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
+      <div class="box"><i class="fab fa-js-square gridimg" id="12" onmouseover='hidegrid(this.id, "wm1")' onmouseout='showgrid(this.id, "wm1")'></i></div>
     </main>
     <section class='watermarks'>
-      <i class="fab fa-js-square water"></i>
+      <i class="fab fa-js-square water" id='wm1'></i>
     </section>
   </div>
-        <script type="text/javascript">
-
-          let hov = document.querySelector('.js');
-          let grid = document.getElementsByClassName('gridimg');
-          hov.onmouseover = function(){
-            // hide all icons
-            for (let i = 0; i < grid.length; i++){
-              grid[i].style.visibility = 'hidden';
-            }
-            // show current icon and watermark
-            this.style.cssText = 'transition: none; visibility: visible; opacity: 25%;'
-            document.querySelector('.water').style.cssText = 'visibility: visible; color: #f7df1e; opacity: 60%;'
-            }
-            hov.onmouseout = function(){
-              // make icons visible again and hide watermark
-              for (let j = 0; j < grid.length; j++){
-                grid[j].style.cssText = 'visibility: visible; opacity: 1;'
-              }
-              document.querySelector('.water').style.visibility = 'hidden';
-            }
-
-
-          /*  let grid = document.getElementsByClassName('gridimg');
-            for (let i = 0; i < grid.length; i++){
-                //grid[i].style.visibility = 'visible';
-              //grid[i].style.visibility = 'hidden';
-                //grid[i].style.visibility = 'hidden';
-            }*/
-
-
-            // add animation
-            let el = document.querySelector('.soft');
-            setTimeout(function(){ el.classList.add('addAnimation') }, 800);
-            let hard = document.querySelector('.hard');
-            setTimeout(function(){ hard.classList.add('hardAnimation') }, 2200);
-
-      </script>
 </body>
 </html>

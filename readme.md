@@ -73,3 +73,9 @@ anime.timeline({loop: false})
       }
 
     animateWords();
+
+  </script>
+
+
+[recent work](https://upbeat-villani-0c3b78.netlify.app/)
+
