@@ -105,15 +105,15 @@ main {
 
 @keyframes float {
   0% {
-    box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
     transform: translatey(0px);
   }
   50% {
-    box-shadow: 0 25px 15px 0px rgba(255, 255, 255, 0.1);
+    text-shadow: 0 25px 15px #579dff;/*rgba(255, 255, 255, 0.1)*/;
     transform: translatey(-10px);
   }
   100% {
-    box-shadow: 0 5px 15px 0px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
     transform: translatey(0px);
   }
 }
@@ -121,13 +121,11 @@ main {
   /* watermarks */
 
  .water {
-    color: white;
     font-size: 40rem;
     position: fixed;
     visibility:  hidden;
-    opacity: 20%;
-    right: 20px;
-    bottom: 20px;
+    bottom: 10%;
+    left: 43%;
     z-index: 0;
  }
 

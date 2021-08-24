@@ -1,10 +1,10 @@
-          function hidegrid(gridId, wmId){
+          function hidegrid(gridId, wmId, color){
             let grid = document.getElementsByClassName('gridimg');
               for (let i = 0; i < grid.length; i++){
                 grid[i].style.display = 'none';
             }
             document.getElementById(gridId).style.display = 'block';
-            document.getElementById(wmId).style.cssText = 'visibility: visible; color: #f7df1e; opacity: 60%;'
+            document.getElementById(wmId).style.cssText = `visibility: visible; color: ${color}; opacity: 60%;`
           }
 
             function showgrid(gridId, wmId){
