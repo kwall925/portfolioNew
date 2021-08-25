@@ -8,7 +8,7 @@
   margin: 0;
 }
 
-body{  background: #012430; }
+body {  background: #012430; }
 
 .container {
   height:  93vh;
@@ -18,7 +18,7 @@ body{  background: #012430; }
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  z-index: -1;
+  /*z-index: -1;*/
 }
 
 /* the text content to side of grid */
@@ -28,7 +28,7 @@ body{  background: #012430; }
   justify-content: flex-start;
   flex-direction: column-reverse;
   position:  relative;
-  }
+}
 
 /* small text. content:  Ken Wall Front End Dev */
 .soft {
@@ -95,52 +95,68 @@ main {
 .gridimg {
   font-size: 150px;
   color:  white;
+  z-index: 1;
   opacity: 0;
   transition: opacity 1s ease-in;
   animation: float 10s ease-in-out infinite;
  }
 
- .fab {
+ /*.fab {
   background: transparent;
- }
+ }*/
 
-@keyframes float {
-  0% {
-    text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
-    transform: translatey(0px);
+  @keyframes float {
+    0% {
+      text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+      transform: translatey(0px);
+    }
+    50% {
+      text-shadow: 0 25px 15px rgba(87, 157, 255, 0.7)/*rgba(255, 255, 255, 0.1)*/;
+      transform: translatey(-10px);
+    }
+    100% {
+      text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
+      transform: translatey(0px);
+    }
   }
-  50% {
-    text-shadow: 0 25px 15px #579dff;/*rgba(255, 255, 255, 0.1)*/;
-    transform: translatey(-10px);
-  }
-  100% {
-    text-shadow: 0 5px 15px rgba(255, 255, 255, 0.5);
-    transform: translatey(0px);
-  }
-}
 
   /* watermarks */
 
+/*  .flex {
+    border: 1px solid red;
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+  }*/
+
  .water {
     font-size: 40rem;
-    position: fixed;
     visibility:  hidden;
-    bottom: 10%;
-    left: 43%;
-    z-index: 0;
+    position: fixed;
+    bottom: 20%;
+    left: 50%;
+    /*z-index: 0;*/
  }
 
  .water > p {
-  font-size: 12px;
+  font-size: 19px;
   font-family: 'IBM Plex Sans Condensed', sans-serif;
   font-style: italic;
+  position:  relative;
+  margin-right: -15em;
+  margin-top: -20em;
+  width:  200px;
   color:  white;
+  opacity: 1;
  }
 
  /* React Animation [src](https://codepen.io/html5andblog/pen/3380ea499a31781546dea2570e3a5180)*/
  .fa-spin-reverse {
-  -webkit-animation: fa-spin-reverse 12s infinite linear;
-  animation: fa-spin-reverse 12s infinite linear;
+  -webkit-animation: fa-spin-reverse 16s infinite linear;
+  animation: fa-spin-reverse 16s infinite linear;
 }
 
 @keyframes fa-spin-reverse {
